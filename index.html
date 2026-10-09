@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Kiew's</title>
-<meta name="theme-color" content="#f5f5f7">
+<meta name="theme-color" content="#2f4bd6">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -19,16 +19,16 @@
 <style>
 /* Layout: phone-first single column — two big in/out buttons, today card, list, month table; bottom sheet for entry */
 :root{
-  --bg:#f5f5f7; --card:#ffffff; --fg:#1d1d1f; --muted:#6e6e73; --line:#e5e5ea;
-  --accent:#1d1d1f; --in:#248a3d; --in-soft:#eaf6ec; --out:#d70015; --out-soft:#fdecee;
-  --body:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Helvetica Neue",sans-serif;
+  --bg:#f3f5fb; --card:#ffffff; --fg:#1d2340; --muted:#5d6482; --line:#e1e4ef;
+  --accent:#2f4bd6; --in:#17865a; --in-soft:#e1f4ea; --out:#c63d2a; --out-soft:#fce7e3;
+  --body:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#000000; --card:#1c1c1e; --fg:#f5f5f7; --muted:#a1a1a6; --line:#38383a;
-  --accent:#f5f5f7; --in:#30d158; --in-soft:#11301a; --out:#ff453a; --out-soft:#3a1412; color-scheme:dark}}
+  --bg:#12152a; --card:#1b1f3a; --fg:#eceefa; --muted:#a3a9c8; --line:#2c3155;
+  --accent:#8ea0ff; --in:#5fd39b; --in-soft:#173a2c; --out:#ff8a74; --out-soft:#43231e; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#000000; --card:#1c1c1e; --fg:#f5f5f7; --muted:#a1a1a6; --line:#38383a;
-  --accent:#f5f5f7; --in:#30d158; --in-soft:#11301a; --out:#ff453a; --out-soft:#3a1412; color-scheme:dark}
+  --bg:#12152a; --card:#1b1f3a; --fg:#eceefa; --muted:#a3a9c8; --line:#2c3155;
+  --accent:#8ea0ff; --in:#5fd39b; --in-soft:#173a2c; --out:#ff8a74; --out-soft:#43231e; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;padding:0 16px;margin:0}
 .wrap{max-width:520px;margin:0 auto;padding-block:18px 60px;display:flex;flex-direction:column;gap:14px}
@@ -111,12 +111,12 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline
 </style>
 
 <div class="wrap">
-  <h1>Kiew's</h1>
+  <h1>服装店每日记账</h1>
   <div class="warn" id="warn" hidden></div>
 
   <div class="card" id="emptyCard" hidden style="border:2px solid var(--accent)">
     <h2>👋 第一次用？先把旧资料搬进来</h2>
-    <p class="note" style="text-align:left;margin:0 0 10px">1. 在 WhatsApp 长按那段「#服装店备份#…」文字 → 拷贝<br>2. 回来按下面黑色按钮</p>
+    <p class="note" style="text-align:left;margin:0 0 10px">1. 在 WhatsApp 长按那段「#服装店备份#…」文字 → 拷贝<br>2. 回来按下面蓝色按钮</p>
     <button class="bk" id="pasteBtn" style="width:100%;font-size:18px;padding:14px">📋 贴上备份，恢复资料</button>
   </div>
   <div class="datebar">
